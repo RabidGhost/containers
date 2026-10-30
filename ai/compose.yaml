@@ -1,0 +1,8 @@
+services:
+  ai:
+    build: .
+    volumes:
+      - ~/.claude/:/home/ai/.claude/:z
+      - ~/.claude.json:/home/ai/.claude.json:z
+      - ${PWD}:${PWD}:z
+    working_dir: ${PWD}
